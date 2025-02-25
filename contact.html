@@ -21,6 +21,21 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script src="js/script.js" defer></script>
+        <script>
+            window.onload = function() {
+                loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');
+                loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');
+                loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');
+
+                loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');
+                loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');
+                loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');
+                loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');
+            };
+        </script>
     </head>
 
     <body style="font-family: 'Arial Rounded MT Bold'">
@@ -32,8 +47,8 @@
                         <div class="col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <h1>Kanun</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+<!--                                    <h1>Kanun</h1>-->
+                                    <img src="img/logo_borderless.png" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -76,17 +91,13 @@
                                 <a href="service.html" class="nav-item nav-link">Practice</a>
                                 <a href="team.html" class="nav-item nav-link">Attorneys</a>
                                 <a href="portfolio.html" class="nav-item nav-link">Case Studies</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        <a href="single.html" class="dropdown-item">Single Page</a>
-                                    </div>
-                                </div>
+
+                                <a href="blog.html" class="nav-item nav-link">Blog Page</a>
+
                                 <a href="contact.html" class="nav-item nav-link active">Contact</a>
                             </div>
                             <div class="ml-auto">
-                                <a class="btn" href="">Get Appointment</a>
+                                <a class="btn" href="contact.html">Get Appointment</a>
                             </div>
                         </div>
                     </nav>
@@ -119,50 +130,27 @@
                         <h2>Contact Us</h2>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="fa fa-map-marker-alt"></i>
-                                    <div class="contact-text">
-                                        <h2>Location</h2>
-                                        <p>123 Street, New York, USA</p>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fa fa-phone-alt"></i>
-                                    <div class="contact-text">
-                                        <h2>Phone</h2>
-                                        <p>+012 345 67890</p>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fa fa-envelope"></i>
-                                    <div class="contact-text">
-                                        <h2>Email</h2>
-                                        <p>info@example.com</p>
-                                    </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="contact-text">
+                                    <h2>Location</h2>
+                                    <p>123 Street, New York, USA</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="contact-form">
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Name" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Message" required="required" ></textarea>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit">Send Message</button>
-                                    </div>
-                                </form>
+                            <div class="contact-item">
+                                <i class="fa fa-phone-alt"></i>
+                                <div class="contact-text">
+                                    <h2>Phone</h2>
+                                    <p>+012 345 67890</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope"></i>
+                                <div class="contact-text">
+                                    <h2>Email</h2>
+                                    <p>info@example.com</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -170,20 +158,6 @@
             </div>
             <!-- Contact End -->
 
-
-            <!-- Newsletter Start -->
-            <div class="newsletter">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Subscribe Our Newsletter</h2>
-                    </div>
-                    <div class="form">
-                        <input class="form-control" placeholder="Email here">
-                        <button class="btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Newsletter End -->
 
 
             <!-- Footer Start -->

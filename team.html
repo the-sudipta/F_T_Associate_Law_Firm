@@ -21,6 +21,22 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script src="js/script.js" defer></script>
+        <script>
+            window.onload = function() {
+                loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');
+                loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');
+                loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');
+
+                loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');
+                loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');
+                loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');
+                loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');
+            };
+        </script>
+
     </head>
 
     <body style="font-family: 'Arial Rounded MT Bold'">
@@ -32,8 +48,8 @@
                         <div class="col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <h1>Kanun</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+<!--                                    <h1>Kanun</h1>-->
+                                    <img src="img/logo_borderless.png" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -76,17 +92,13 @@
                                 <a href="service.html" class="nav-item nav-link">Practice</a>
                                 <a href="team.html" class="nav-item nav-link active">Attorneys</a>
                                 <a href="portfolio.html" class="nav-item nav-link">Case Studies</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="single-page.html" class="dropdown-item">Blog Page</a>
-                                        <a href="#" class="dropdown-item">Single Page</a>
-                                    </div>
-                                </div>
+
+                                <a href="blog.html" class="nav-item nav-link">Blog Page</a>
+
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                             <div class="ml-auto">
-                                <a class="btn" href="">Get Appointment</a>
+                                <a class="btn" href="contact.html">Get Appointment</a>
                             </div>
                         </div>
                     </nav>
@@ -154,14 +166,9 @@
                                     <img src="img/team-1.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Adam Phillips</h2>
-                                    <p>Business Consultant</p>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    <h2 id="employee-name-1">Loading...</h2>
+                                    <p id="employee-position-1">Loading...</p>
+
                                 </div>
                             </div>
                         </div>
@@ -171,14 +178,9 @@
                                     <img src="img/team-2.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Dylan Adams</h2>
-                                    <p>Criminal Consultant</p>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    <h2 id="employee-name-2">Loading...</h2>
+                                    <p id="employee-position-2">Loading...</p>
+
                                 </div>
                             </div>
                         </div>
@@ -188,14 +190,9 @@
                                     <img src="img/team-3.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Gloria Edwards</h2>
-                                    <p>Divorce Consultant</p>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    <h2 id="employee-name-3">Loading...</h2>
+                                    <p id="employee-position-3">Loading...</p>
+
                                 </div>
                             </div>
                         </div>
@@ -205,14 +202,9 @@
                                     <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Josh Dunn</h2>
-                                    <p>Immigration Consultant</p>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    <h2 id="employee-name-4">Loading...</h2>
+                                    <p id="employee-position-4">Loading...</p>
+
                                 </div>
                             </div>
                         </div>
@@ -221,20 +213,6 @@
             </div>
             <!-- Team End -->
 
-
-            <!-- Newsletter Start -->
-            <div class="newsletter">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Subscribe Our Newsletter</h2>
-                    </div>
-                    <div class="form">
-                        <input class="form-control" placeholder="Email here">
-                        <button class="btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Newsletter End -->
 
 
             <!-- Footer Start -->
