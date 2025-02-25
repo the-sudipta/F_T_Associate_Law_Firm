@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Kanun - Law Firm Website Template</title>
+        <title>F T Associate Law Firm</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Law Firm Website Template" name="keywords">
         <meta content="Law Firm Website Template" name="description">
@@ -15,31 +15,41 @@
         
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<!--        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
 
-        <script src="js/script.js" defer></script>
-        <script>
-            window.onload = function() {
-                loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');
-                loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');
-                loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');
-                loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');
-                loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');
+        </style>
 
-                loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');
-                loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');
-                loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');
-                loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');
+<!--        <script src="js/script.js" defer></script>-->
+<!--        <script>-->
+<!--            window.onload = function() {-->
+<!--                loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');-->
+<!--                loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');-->
+<!--                loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');-->
+<!--                loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');-->
+<!--                loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');-->
 
-                loadCoreValues('data/core-values.txt', 'core-value-title-1', 'core-value-description-1', 0, 'Error loading Core Value 1:');
-                loadCoreValues('data/core-values.txt', 'core-value-title-2', 'core-value-description-2', 1, 'Error loading Core Value 2:');
-            };
-        </script>
+<!--                loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');-->
+<!--                loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');-->
+<!--                loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');-->
+<!--                loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');-->
+
+<!--                loadCoreValues('data/core-values.txt', 'core-value-title-1', 'core-value-description-1', 0, 'Error loading Core Value 1:');-->
+<!--                loadCoreValues('data/core-values.txt', 'core-value-title-2', 'core-value-description-2', 1, 'Error loading Core Value 2:');-->
+
+<!--                loadPracticeAreas('data/practice-areas.txt', 'practice-area-title-1', 'practice-area-description-1', 0, 'Error loading Practice Area 1:');-->
+<!--                loadPracticeAreas('data/practice-areas.txt', 'practice-area-title-2', 'practice-area-description-2', 1, 'Error loading Practice Area 1:');-->
+
+
+<!--            };-->
+<!--        </script>-->
     </head>
 
     <body style="font-family: 'Arial Rounded MT Bold'">
@@ -92,7 +102,7 @@
                             <div class="navbar-nav mr-auto">
                                 <a href="index.html" class="nav-item nav-link active">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Practice</a>
+                                <a href="service.html" class="nav-item nav-link">Service</a>
                                 <a href="team.html" class="nav-item nav-link">Attorneys</a>
                                 <a href="portfolio.html" class="nav-item nav-link">Case Studies</a>
 
@@ -108,8 +118,8 @@
                 </div>
             </div>
             <!-- Nav Bar End -->
-            
-            
+
+
             <!-- Carousel Start -->
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -119,28 +129,31 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/carousel-1.jpg" alt="Carousel Image">
+                        <video autoplay loop muted playsinline class="d-block w-100">
+                            <source src="video/carousel_1.mp4" type="video/mp4">
+                        </video>
                         <div class="carousel-caption">
-                            <h1 id="motto-text-1" class="animated fadeInLeft">We fight for your justice</h1>
-<!--                            <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>-->
+                            <h1 id="motto-text-1" class="animated fadeInLeft">In Law We Trust, In Legal We Serve</h1>
                             <a class="btn animated fadeInUp" href="contact.html">Get free consultation</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/carousel-2.jpg" alt="Carousel Image">
+                        <video autoplay loop muted playsinline class="d-block w-100">
+                            <source src="video/carousel_2.mp4" type="video/mp4">
+                        </video>
                         <div class="carousel-caption">
-                            <h1 id="motto-text-2" class="animated fadeInLeft">We prepared to oppose for you</h1>
-<!--                            <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>-->
+                            <h1 id="motto-text-2" class="animated fadeInLeft">In Law We Trust, In Legal We Serve</h1>
                             <a class="btn animated fadeInUp" href="contact.html">Get free consultation</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/carousel-3.jpg" alt="Carousel Image">
+                        <video autoplay loop muted playsinline class="d-block w-100">
+                            <source src="video/carousel_3.mp4" type="video/mp4">
+                        </video>
                         <div class="carousel-caption">
-                            <h1 id="motto-text-3" class="animated fadeInLeft">We fight for your privilege</h1>
-<!--                            <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>-->
+                            <h1 id="motto-text-3" class="animated fadeInLeft">In Law We Trust, In Legal We Serve</h1>
                             <a class="btn animated fadeInUp" href="contact.html">Get free consultation</a>
                         </div>
                     </div>
@@ -156,8 +169,9 @@
                 </a>
             </div>
             <!-- Carousel End -->
-            
-            
+
+
+
             <!-- Top Feature Start-->
             <div class="feature-top">
                 <div class="container-fluid">
@@ -210,7 +224,13 @@
                                 <h2>Learn About Us</h2>
                             </div>
                             <div class="about-text">
-                                <p id="about-us-text">Loading...</p>
+                                <p id="about-us-text">
+                                    FT Associate Law Firm, founded in 2015 and located in Uttara, is a trusted legal partner for businesses, individuals,
+                                    and families. Our firm offers a comprehensive range of legal services, specializing in company formation, tax consultancy,
+                                    intellectual property, family law, and more. With a commitment to integrity, efficiency, and client-centered solutions,
+                                    our experienced team provides strategic, solution-driven legal support that empowers our clients to navigate challenges
+                                    and achieve their goals. Discover how our expertise can protect your interests and elevate your success.
+                                </p>
                                 <a class="btn" href="about.html">Learn More</a>
                             </div>
                         </div>
@@ -230,11 +250,11 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-landmark"></i>
+                                    <i class="fa-solid fa-building"></i>
                                 </div>
-                                <h3>Civil Law</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                <h3 id="practice-area-title-1">Company Formation and Registration</h3>
+                                <p id="practice-area-description-1">
+                                    Guiding businesses through every step of establishing a legal entity, from registration to compliance, ensuring a seamless start
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -242,23 +262,26 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-users"></i>
+                                    <i class="fa-solid fa-business-time"></i>
+                                </div>
+                                <h3 id="practice-area-title-2">Business Setup and Corporate Documentation</h3>
+                                <p id="practice-area-description-2">
+                                    Comprehensive assistance in setting up businesses and managing essential documentation, including partnerships, shareholder agreements,
+                                    and regulatory filings
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-people-roof"></i>
+<!--                                    <i class="fa fa-hand-holding-usd"></i>-->
                                 </div>
                                 <h3>Family Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                                </p>
-                                <a class="btn" href="">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fa fa-hand-holding-usd"></i>
-                                </div>
-                                <h3>Business Law</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Compassionate support in family law cases, from divorce  and child custody to alimony and asset division, providing sensitive and
+                                    effective representation
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -268,9 +291,9 @@
                                 <div class="service-icon">
                                     <i class="fa fa-graduation-cap"></i>
                                 </div>
-                                <h3>Education Law</h3>
+                                <h3>Intellectual Property</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Protection of intellectual property rights, covering trademark registration, patent filings, copyright protection, and dispute resolution
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -282,7 +305,8 @@
                                 </div>
                                 <h3>Criminal Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Skilled defense and representation in criminal cases, safeguarding clients’ rights and providing strategic counsel through all stages
+                                    of criminal proceedings
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -290,11 +314,74 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-globe"></i>
+                                    <i class="fa fa-users"></i>
                                 </div>
-                                <h3>Cyber Law</h3>
+                                <h3>Civil Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Representation in civil disputes, handling a range of issues from contract disputes to property claims with efficiency and dedication
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-person-arrow-down-to-line"></i>
+                                </div>
+                                <h3>Land and Property Documentation</h3>
+                                <p>
+                                    Support in managing land documentation, ownership rights, and transactions, ensuring compliance and protection of property interests
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <h3>Banking and Finance</h3>
+                                <p>
+                                    Legal counsel for financial transactions, loans, and banking regulations to support both businesses and individuals in managing
+                                    financial relationships
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-percent"></i>
+<!--                                    <i class="fa fa-globe"></i>-->
+                                </div>
+                                <h3>Taxation, VAT, and Customs</h3>
+                                <p>
+                                    Expert guidance on tax matters, VAT issues, and customs regulations, helping clients navigate complexities and avoid penalties
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </div>
+                                <h3>Immigration and Visa Services</h3>
+                                <p>
+                                    Assistance with immigration processes, visa applications, and related legal matters for individuals and businesses with cross-border interests
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa fa-landmark"></i>
+                                </div>
+                                <h3>Writs and High Court Matters</h3>
+                                <p>
+                                    Skilled representation in writ petitions and cases in the High Court, defending clients’ rights and achieving favorable outcomes in
+                                    complex legal situations
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -316,26 +403,31 @@
                             <div class="row align-items-center feature-item">
                                 <div class="col-5">
                                     <div class="feature-icon">
-                                        <i class="fa fa-gavel"></i>
+                                        <i class="fa-solid fa-arrows-to-eye"></i>
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <h3 id="core-value-title-1" >Loading...</h3>
+                                    <h3 id="core-value-title-1" >Client-Centered Approach</h3>
                                     <p id="core-value-description-1">
-                                        Loading...
+                                        Every client’s situation is unique, and we tailor our approach to meet specific needs and goals.
+                                        Our client-centered focus drives us to provide attentive, responsive, and personalized legal solutions.
+
                                     </p>
                                 </div>
                             </div>
                             <div class="row align-items-center feature-item">
                                 <div class="col-5">
                                     <div class="feature-icon">
-                                        <i class="fa fa-balance-scale"></i>
+                                        <i class="fa-solid fa-crosshairs"></i>
+<!--                                        <i class="fa fa-balance-scale"></i>-->
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <h3 id="core-value-title-2">Loading...</h3>
+                                    <h3 id="core-value-title-2">Efficiency & Precision</h3>
                                     <p id="core-value-description-2">
-                                        Loading...
+                                        Combining efficiency with deep expertise, we deliver high-quality legal support that saves our clients time and resources,
+                                        without compromising on thoroughness and accuracy.
+
                                     </p>
                                 </div>
                             </div>
@@ -377,8 +469,8 @@
                                     <img src="img/team-1.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2 id="employee-name-1">Loading...</h2>
-                                    <p id="employee-position-1">Loading...</p>
+                                    <h2 id="employee-name-1">Adam Phillips</h2>
+                                    <p id="employee-position-1">Business Consultant</p>
 
                                 </div>
                             </div>
@@ -389,8 +481,8 @@
                                     <img src="img/team-2.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2 id="employee-name-2">Loading...</h2>
-                                    <p id="employee-position-2">Loading...</p>
+                                    <h2 id="employee-name-2">Dylan Adams</h2>
+                                    <p id="employee-position-2">Criminal Consultant</p>
 
                                 </div>
                             </div>
@@ -401,8 +493,8 @@
                                     <img src="img/team-3.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2 id="employee-name-3">Loading...</h2>
-                                    <p id="employee-position-3">Loading...</p>
+                                    <h2 id="employee-name-3">Emily Watson</h2>
+                                    <p id="employee-position-3">Marketing Manager</p>
 
                                 </div>
                             </div>
@@ -413,8 +505,8 @@
                                     <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2 id="employee-name-4">Loading...</h2>
-                                    <p id="employee-position-4">Loading...</p>
+                                    <h2 id="employee-name-4">James Brown</h2>
+                                    <p id="employee-position-4">Software Engineer</p>
 
                                 </div>
                             </div>
@@ -434,7 +526,7 @@
                                 <img src="img/faqs.jpg" alt="Image">
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div id="faq" class="col-md-7">
                             <div class="section-header">
                                 <h2>Have A Questions?</h2>
                             </div>
@@ -500,7 +592,7 @@
                                     </div>
                                 </div> 
                             </div>
-                            <a class="btn" href="">Ask more</a>
+                            <a class="btn" href="contact.html">Ask more</a>
                         </div>
                     </div>
                 </div>
@@ -509,245 +601,245 @@
 
 
             <!-- Testimonial Start -->
-            <div class="testimonial">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Review From Client</h2>
-                    </div>
-                    <div class="owl-carousel testimonials-carousel">
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-1.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-2.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-3.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-4.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-1.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-2.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <i class="fa fa-quote-right"></i>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-3.jpg" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Client Name</h2>
-                                    <p>Profession</p>
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="testimonial">-->
+<!--                <div class="container">-->
+<!--                    <div class="section-header">-->
+<!--                        <h2>Review From Client</h2>-->
+<!--                    </div>-->
+<!--                    <div class="owl-carousel testimonials-carousel">-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-1.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-2.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-3.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-4.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-1.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-2.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="testimonial-item">-->
+<!--                            <i class="fa fa-quote-right"></i>-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col-3">-->
+<!--                                    <img src="img/testimonial-3.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="col-9">-->
+<!--                                    <h2>Client Name</h2>-->
+<!--                                    <p>Profession</p>-->
+<!--                                </div>-->
+<!--                                <div class="col-12">-->
+<!--                                    <p>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- Testimonial End -->
 
 
             <!-- Blog Start -->
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Latest From Blog</h2>
-                    </div>
-                    <div class="owl-carousel blog-carousel">
-                        <div class="blog-item">
-                            <img src="img/blog-1.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Civil Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-2.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Family Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-3.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Business Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-1.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Education Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-2.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Criminal Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-3.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Cyber Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="blog-item">
-                            <img src="img/blog-1.jpg" alt="Blog">
-                            <h3>Lorem ipsum dolor</h3>
-                            <div class="meta">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="">Business Law</a>
-                                <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="blog">-->
+<!--                <div class="container">-->
+<!--                    <div class="section-header">-->
+<!--                        <h2>Latest From Blog</h2>-->
+<!--                    </div>-->
+<!--                    <div class="owl-carousel blog-carousel">-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-1.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Civil Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-2.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Family Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-3.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Business Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-1.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Education Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-2.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Criminal Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-3.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Cyber Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="blog-item">-->
+<!--                            <img src="img/blog-1.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Business Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- Blog End -->
             
             
@@ -769,22 +861,23 @@
                             <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Civil Law</a>
+                                <h2>Key Services Areas</h2>
+                                <a href="">Company Formation and Registration</a>
+                                <a href="">Business Setup and Corporate Documentation</a>
                                 <a href="">Family Law</a>
-                                <a href="">Business Law</a>
-                                <a href="">Education Law</a>
-                                <a href="">Immigration Law</a>
+                                <a href="">Intellectual Property</a>
+                                <a href="">Criminal Law</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Practices</a>
-                                <a href="">Attorneys</a>
-                                <a href="">Case Studies</a>
-                                <a href="">FAQs</a>
+                                <a href="about.html">About Us</a>
+                                <a href="service.html">Service</a>
+                                <a href="team.html">Attorneys</a>
+                                <a href="portfolio.html">Case Studies</a>
+                                <a href="blog.html">Blogs</a>
+                                <a href="#faq">FAQs</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">

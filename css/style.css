@@ -630,6 +630,7 @@ a:focus {
     text-align: center;
     background: #121518;
     margin-bottom: 30px;
+    height: 92%;
 }
 
 .service .service-icon {
@@ -910,24 +911,29 @@ a:focus {
     font-weight: 700;
 }
 
+/* Fixed Font Awesome Icons */
 .faqs .card-header [data-toggle="collapse"]:after {
-    font-family: 'Arial Rounded MT Bold';
-    content: "\f067";
+    font-family: "Font Awesome 5 Free"; /* Use Font Awesome */
+    content: "\f067"; /* Plus icon */
     float: right;
     color: #121518;
     font-size: 12px;
     font-weight: 900;
     transition: .3s;
+    font-style: normal;
+    display: inline-block;
 }
 
 .faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
-    font-family: 'Arial Rounded MT Bold';
-    content: "\f068";
+    font-family: "Font Awesome 5 Free"; /* Use Font Awesome */
+    content: "\f068"; /* Minus icon */
     float: right;
     color: #121518;
     font-size: 12px;
     font-weight: 900;
     transition: .3s;
+    font-style: normal;
+    display: inline-block;
 }
 
 .faqs .card-body {
@@ -956,6 +962,7 @@ a:focus {
     color: #121518;
     background: #0076b5;
 }
+
 
 
 /*******************************/
@@ -1631,7 +1638,7 @@ a:focus {
 
 .footer .footer-about h2,
 .footer .footer-link h2,
-.footer .footer-contact h2{
+.footer .footer-contact h2 {
     position: relative;
     margin-bottom: 30px;
     font-size: 25px;
@@ -1646,11 +1653,12 @@ a:focus {
     transition: .3s;
 }
 
+/* Fixed Font Awesome Icons */
 .footer .footer-link a::before {
     position: relative;
-    content: "\f105";
-    font-family: "Arial Rounded MT Bold";
-    font-weight: 900;
+    content: "\f105"; /* Correct Font Awesome Unicode */
+    font-family: "Font Awesome 5 Free"; /* Use Font Awesome */
+    font-weight: 900; /* Required for solid icons */
     margin-right: 10px;
 }
 
@@ -1663,6 +1671,7 @@ a:focus {
     width: 25px;
 }
 
+/* Fixed Social Media Icons */
 .footer .footer-social {
     position: relative;
     margin-top: 20px;
@@ -1676,6 +1685,8 @@ a:focus {
     margin-right: 15px;
     font-size: 18px;
     color: #0076b5;
+    font-family: "Font Awesome 5 Free"; /* Ensure proper icons */
+    font-weight: 900;
 }
 
 .footer .footer-social a:last-child i {
@@ -1711,7 +1722,6 @@ a:focus {
     padding-right: 0;
     border-right: none;
 }
-
 
 .footer .copyright {
     padding: 30px 15px;

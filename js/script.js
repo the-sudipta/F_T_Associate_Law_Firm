@@ -82,3 +82,38 @@ function loadCoreValues(filePath, titleElementId, descriptionElementId, index, e
 
 // Ensure function is globally available
 window.loadCoreValues = loadCoreValues;
+
+
+// Function to load Practice Areas from a text file and update the given HTML elements
+function loadPracticeAreas(filePath, titleElementId, descriptionElementId, index, errorMessage) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+            let titleElement = document.getElementById(titleElementId);
+            let descriptionElement = document.getElementById(descriptionElementId);
+
+            if (!titleElement || !descriptionElement) {
+                console.error(`Element with ID '${titleElementId}' or '${descriptionElementId}' not found.`);
+                return;
+            }
+
+            // Normalize line breaks and remove excess whitespace
+            let values = data.trim().replace(/\r\n/g, "\n").split("\n\n");
+
+            if (index >= 0 && index < values.length) {
+                let parts = values[index].split("\n").map(line => line.trim()).filter(line => line !== "");
+                if (parts.length >= 2) {
+                    titleElement.innerText = parts[0]; // Title
+                    descriptionElement.innerText = parts.slice(1).join(" "); // Description (joining remaining lines)
+                } else {
+                    console.error(`Invalid format at index ${index}.`);
+                }
+            } else {
+                console.error(`Index '${index}' is out of range.`);
+            }
+        })
+        .catch(error => console.error(errorMessage, error));
+}
+
+// Ensure function is globally available
+window.loadPracticeAreas = loadPracticeAreas;
