@@ -11,13 +11,20 @@
         <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
-        
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+
+        </style>
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -88,11 +95,12 @@
                             <div class="navbar-nav mr-auto">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link active">Practice</a>
-                                <a href="team.html" class="nav-item nav-link">Attorneys</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Practice Areas</a>
+                                <a href="services.html" class="nav-item nav-link">Services</a>
+                                <a href="practice.html" class="nav-item nav-link active">Practice</a>
+                                <a href="attorneys.html" class="nav-item nav-link">Attorneys</a>
+<!--                                <a href="portfolio.html" class="nav-item nav-link">Practice Areas</a>-->
 
-                                <a href="blog.html" class="nav-item nav-link">Blog Page</a>
+<!--                                <a href="blog.html" class="nav-item nav-link">Blog Page</a>-->
 
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
@@ -111,11 +119,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Practices Areas</h2>
+                            <h2>Practice Areas</h2>
                         </div>
                         <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Practices Areas</a>
+                            <a href="index.html">Home</a>
+                            <a href="practice.html">Practices Areas</a>
                         </div>
                     </div>
                 </div>
@@ -127,17 +135,17 @@
             <div class="service">
                 <div class="container">
                     <div class="section-header">
-                        <h2>Our Practices Areas</h2>
+                        <h2>Our All Practice Areas</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-landmark"></i>
+                                    <i class="fa-solid fa-building"></i>
                                 </div>
-                                <h3>Civil Law</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                <h3 id="practice-area-title-1">Company Formation and Registration</h3>
+                                <p id="practice-area-description-1">
+                                    Guiding businesses through every step of establishing a legal entity, from registration to compliance, ensuring a seamless start
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -145,23 +153,26 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-users"></i>
+                                    <i class="fa-solid fa-business-time"></i>
+                                </div>
+                                <h3 id="practice-area-title-2">Business Setup and Corporate Documentation</h3>
+                                <p id="practice-area-description-2">
+                                    Comprehensive assistance in setting up businesses and managing essential documentation, including partnerships, shareholder agreements,
+                                    and regulatory filings
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-people-roof"></i>
+                                    <!--                                    <i class="fa fa-hand-holding-usd"></i>-->
                                 </div>
                                 <h3>Family Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                                </p>
-                                <a class="btn" href="">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fa fa-hand-holding-usd"></i>
-                                </div>
-                                <h3>Business Law</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Compassionate support in family law cases, from divorce  and child custody to alimony and asset division, providing sensitive and
+                                    effective representation
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -171,9 +182,9 @@
                                 <div class="service-icon">
                                     <i class="fa fa-graduation-cap"></i>
                                 </div>
-                                <h3>Education Law</h3>
+                                <h3>Intellectual Property</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Protection of intellectual property rights, covering trademark registration, patent filings, copyright protection, and dispute resolution
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -185,7 +196,8 @@
                                 </div>
                                 <h3>Criminal Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Skilled defense and representation in criminal cases, safeguarding clients’ rights and providing strategic counsel through all stages
+                                    of criminal proceedings
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -193,11 +205,74 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="service-item">
                                 <div class="service-icon">
-                                    <i class="fa fa-globe"></i>
+                                    <i class="fa fa-users"></i>
                                 </div>
-                                <h3>Cyber Law</h3>
+                                <h3>Civil Law</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                    Representation in civil disputes, handling a range of issues from contract disputes to property claims with efficiency and dedication
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-person-arrow-down-to-line"></i>
+                                </div>
+                                <h3>Land and Property Documentation</h3>
+                                <p>
+                                    Support in managing land documentation, ownership rights, and transactions, ensuring compliance and protection of property interests
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <h3>Banking and Finance</h3>
+                                <p>
+                                    Legal counsel for financial transactions, loans, and banking regulations to support both businesses and individuals in managing
+                                    financial relationships
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-percent"></i>
+                                    <!--                                    <i class="fa fa-globe"></i>-->
+                                </div>
+                                <h3>Taxation, VAT, and Customs</h3>
+                                <p>
+                                    Expert guidance on tax matters, VAT issues, and customs regulations, helping clients navigate complexities and avoid penalties
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </div>
+                                <h3>Immigration and Visa Services</h3>
+                                <p>
+                                    Assistance with immigration processes, visa applications, and related legal matters for individuals and businesses with cross-border interests
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa fa-landmark"></i>
+                                </div>
+                                <h3>Writs and High Court Matters</h3>
+                                <p>
+                                    Skilled representation in writ petitions and cases in the High Court, defending clients’ rights and achieving favorable outcomes in
+                                    complex legal situations
                                 </p>
                                 <a class="btn" href="">Learn More</a>
                             </div>
@@ -214,47 +289,52 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="section-header">
-                                <h2>Why Choose Us</h2>
+                                <h2>Our All Core Values</h2>
                             </div>
                             <div class="row align-items-center feature-item">
                                 <div class="col-5">
                                     <div class="feature-icon">
-                                        <i class="fa fa-gavel"></i>
+                                        <i class="fa-solid fa-arrows-to-eye"></i>
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <h3>Best law practices</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
+                                    <h3 id="core-value-title-1" >Client-Centered Approach</h3>
+                                    <p id="core-value-description-1">
+                                        Every client’s situation is unique, and we tailor our approach to meet specific needs and goals.
+                                        Our client-centered focus drives us to provide attentive, responsive, and personalized legal solutions.
+
                                     </p>
                                 </div>
                             </div>
                             <div class="row align-items-center feature-item">
                                 <div class="col-5">
                                     <div class="feature-icon">
-                                        <i class="fa fa-balance-scale"></i>
+                                        <i class="fa-solid fa-crosshairs"></i>
+                                        <!--                                        <i class="fa fa-balance-scale"></i>-->
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <h3>Efficiency & Trust</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
+                                    <h3 id="core-value-title-2">Efficiency & Precision</h3>
+                                    <p id="core-value-description-2">
+                                        Combining efficiency with deep expertise, we deliver high-quality legal support that saves our clients time and resources,
+                                        without compromising on thoroughness and accuracy.
+
                                     </p>
                                 </div>
                             </div>
-                            <div class="row align-items-center feature-item">
-                                <div class="col-5">
-                                    <div class="feature-icon">
-                                        <i class="far fa-smile"></i>
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h3>Results you deserve</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
-                                    </p>
-                                </div>
-                            </div>
+                            <!--                            <div class="row align-items-center feature-item">-->
+                            <!--                                <div class="col-5">-->
+                            <!--                                    <div class="feature-icon">-->
+                            <!--                                        <i class="far fa-smile"></i>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="col-7">-->
+                            <!--                                    <h3>Results you deserve</h3>-->
+                            <!--                                    <p>-->
+                            <!--                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.-->
+                            <!--                                    </p>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                         </div>
                         <div class="col-md-5">
                             <div class="feature-img">
@@ -313,11 +393,11 @@
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
                                 <p><i class="fa fa-envelope"></i>info@example.com</p>
                                 <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>

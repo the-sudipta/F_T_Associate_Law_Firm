@@ -1685,7 +1685,7 @@ a:focus {
     margin-right: 15px;
     font-size: 18px;
     color: #0076b5;
-    font-family: "Font Awesome 5 Free"; /* Ensure proper icons */
+    /*font-family: "Font Awesome 5 Free"; !* Ensure proper icons *!*/
     font-weight: 900;
 }
 
