@@ -13,6 +13,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <!--  JS Library  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,26 +27,30 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+        .hidden {
+            display: none;
+        }
+
 
     </style>
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/script.js" defer></script>
-    <script>
-        window.onload = function() {
-            loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');
-            loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');
-            loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');
-            loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');
-            loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');
+<!--    <script src="js/script.js" defer></script>-->
+<!--    <script>-->
+<!--        window.onload = function() {-->
+<!--            loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');-->
+<!--            loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');-->
+<!--            loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');-->
+<!--            loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');-->
+<!--            loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');-->
 
-            loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');
-            loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');
-            loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');
-            loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');
-        };
-    </script>
+<!--            loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');-->
+<!--            loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');-->
+<!--            loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');-->
+<!--            loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');-->
+<!--        };-->
+<!--    </script>-->
 </head>
 
 <body style="font-family: 'Arial Rounded MT Bold'">
@@ -142,77 +149,101 @@
                 <div class="col-12">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".first">Civil</li>
-                        <li data-filter=".second">Criminal</li>
-                        <li data-filter=".third">Business</li>
+                        <li data-filter=".first">Business</li>
+                        <li data-filter=".second">Finance</li>
+                        <li data-filter=".third">Legal</li>
+                        <li data-filter=".fourth">Immigration</li>
                     </ul>
                 </div>
             </div>
             <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first">
+                <!-- Portfolio Items -->
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first visible">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-1.jpg" alt="Portfolio Image">
                         <figure>
-                            <p>Crime</p>
-                            <a href="#">Murder Case</a>
-                            <span>01-Jan-2045</span>
+                            <p>Business</p>
+                            <a href="#">Company Formation and Compliance</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second">
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second visible">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-2.jpg" alt="Portfolio Image">
                         <figure>
-                            <p>Politics</p>
-                            <a href="#">Political Case</a>
-                            <span>01-Jan-2045</span>
+                            <p>Finance</p>
+                            <a href="#">Corporate and Tax Consultancy</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third">
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third visible">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-3.jpg" alt="Portfolio Image">
                         <figure>
-                            <p>Family</p>
-                            <a href="#">Divorce Case</a>
-                            <span>01-Jan-2045</span>
+                            <p>Legal</p>
+                            <a href="#">High Court and Writ Matters</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first">
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item fourth hidden">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-4.jpg" alt="Portfolio Image">
                         <figure>
-                            <p>Finance</p>
-                            <a href="#">Money Laundering</a>
-                            <span>01-Jan-2045</span>
+                            <p>Immigration</p>
+                            <a href="#">Immigration and Visa Services</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second">
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first hidden">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-5.jpg" alt="Portfolio Image">
                         <figure>
                             <p>Business</p>
-                            <a href="#">Weber & Partners</a>
-                            <span>01-Jan-2045</span>
+                            <a href="#">Business and Industrial Licenses</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third">
+
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second hidden">
                     <div class="portfolio-wrap">
                         <img src="img/portfolio-6.jpg" alt="Portfolio Image">
                         <figure>
                             <p>Finance</p>
-                            <a href="#">Property Sharing Case</a>
-                            <span>01-Jan-2045</span>
+                            <a href="#">VAT and Customs Services</a>
+<!--                            <span>01-Jan-2045</span>-->
                         </figure>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third hidden">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio-6.jpg" alt="Portfolio Image">
+                        <figure>
+                            <p>Legal</p>
+                            <a href="#">Intellectual Property Protection</a>
+<!--                            <span>01-Jan-2045</span>-->
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second hidden">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio-6.jpg" alt="Portfolio Image">
+                        <figure>
+                            <p>Finance</p>
+                            <a href="#">Audit and Asset Valuation</a>
+<!--                            <span>01-Jan-2045</span>-->
+                        </figure>
+                    </div>
+                </div>
+
             </div>
             <div class="row">
                 <div class="col-12 load-more">
-                    <a class="btn" href="#">Load More</a>
+                    <button id="loadMore" class="btn">Load More</button>
                 </div>
             </div>
         </div>
@@ -313,5 +344,50 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+
+<script>
+<!-- Load More JavaScript Functionality -->
+    $(document).ready(function () {
+        var $portfolioContainer = $('.portfolio-container').isotope({
+            itemSelector: '.portfolio-item'
+        });
+
+        // Show only the first 3 items initially
+        $(".portfolio-item").slice(3).addClass("hidden");
+
+        $("#loadMore").click(function () {
+            $(".portfolio-item.hidden").removeClass('hidden'); // Show all hidden items
+            $("#loadMore").fadeOut(); // Hide button when all items are loaded
+
+            $portfolioContainer.isotope('layout'); // Refresh Isotope layout
+        });
+
+        // Portfolio Filtering
+        $('#portfolio-flters li').click(function () {
+            $('#portfolio-flters li').removeClass('filter-active');
+            $(this).addClass('filter-active');
+
+            var filterValue = $(this).attr('data-filter');
+            $portfolioContainer.isotope({ filter: filterValue });
+
+            // Ensure only 3 items of the selected filter are shown initially
+            $(".portfolio-item").addClass("hidden"); // Hide all items first
+            $(".portfolio-item" + filterValue).slice(0, 3).removeClass("hidden"); // Show first 3 matching items
+
+            // Show the Load More button if there are hidden items
+            if ($(".portfolio-item.hidden").length > 0) {
+                $("#loadMore").fadeIn();
+            } else {
+                $("#loadMore").fadeOut();
+            }
+
+            $portfolioContainer.isotope('layout'); // Refresh Isotope layout
+        });
+    });
+
+
+</script>
+
+
 </body>
 </html>
