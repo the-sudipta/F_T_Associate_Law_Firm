@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kanun - Law Firm Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Law Firm Website Template" name="keywords">
+        <meta content="Law Firm Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* Modal Background */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            /* Modal Content */
+            .modal-content {
+                background: #ffffff;
+                padding: 20px;
+                width: 90%; /* Responsive width */
+                max-width: 600px; /* Restrict max width */
+                max-height: 80vh; /* Prevents overflow, makes it scrollable */
+                overflow-y: auto; /* Enables scrolling inside the modal */
+                border-radius: 10px;
+                position: relative;
+                animation: fadeIn 0.3s;
+                text-align: left;
+            }
+
+            /* Close Button */
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                font-size: 25px;
+                cursor: pointer;
+                color: #121518;
+            }
+
+            /* Image Styling */
+            #modal-image {
+                width: 100%;
+                max-height: 200px; /* Prevents huge images */
+                object-fit: cover;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            /* Modal Text */
+            #modal-title {
+                font-size: 22px;
+                color: #121518;
+            }
+
+            #modal-meta {
+                color: #0076b5;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            /* Ensure text inside modal is readable */
+            .modal-content p, .modal-content h4, .modal-content ul {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+            /* Fade In Animation */
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                .modal-content {
+                    width: 95%;
+                    max-width: 500px;
+                    max-height: 70vh;
+                }
+            }
+
+        </style>
+
+        <script src="js/script.js" defer></script>
+        <script>
+            window.onload = function() {
+                loadText('data/about-us.txt', 'about-us-text', 'Error loading About Us text:');
+                loadText('data/about-us.txt', 'about-us-text-footer', 'Error loading About Us text:');
+                loadText('data/motto-text.txt', 'motto-text-1', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-2', 'Error loading Motto:');
+                loadText('data/motto-text.txt', 'motto-text-3', 'Error loading Motto:');
+
+                loadEmployees('data/employees.txt', 'employee-name-1', 'employee-position-1', 0, 'Error loading Employee 1:');
+                loadEmployees('data/employees.txt', 'employee-name-2', 'employee-position-2', 1, 'Error loading Employee 2:');
+                loadEmployees('data/employees.txt', 'employee-name-3', 'employee-position-3', 2, 'Error loading Employee 3:');
+                loadEmployees('data/employees.txt', 'employee-name-4', 'employee-position-4', 3, 'Error loading Employee 4:');
+            };
+        </script>
+    </head>
+
+    <body style="font-family: 'Arial Rounded MT Bold'">
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+<!--                                    <h1>Kanun</h1>-->
+                                    <img src="img/logo_borderless.png" alt="Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="top-bar-right">
+                                <div class="text">
+                                    <h2>8:00 - 9:00</h2>
+                                    <p>Opening Hour Mon - Fri</p>
+                                </div>
+                                <div class="text">
+                                    <h2>+123 456 7890</h2>
+                                    <p>Call Us For Free Consultation</p>
+                                </div>
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Nav Bar Start -->
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="index.html" class="nav-item nav-link">Home</a>
+                                <a href="about.html" class="nav-item nav-link">About</a>
+                                <a href="services.html" class="nav-item nav-link">Services</a>
+                                <a href="practice.html" class="nav-item nav-link">Practice</a>
+                                <a href="attorneys.html" class="nav-item nav-link">Attorneys</a>
+                                <!--                                <a href="portfolio.html" class="nav-item nav-link">Practice Areas</a>-->
+
+                                <a href="blog.html" class="nav-item nav-link">Blogs</a>
+
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div class="ml-auto">
+                                <a class="btn" href="contact.html">Get Appointment</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->
+            
+            
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Our Blog</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="index.html">Home</a>
+                            <a href="blog.html">Our Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+
+
+            <!-- Blog Start -->
+            <div class="blog">
+                <div class="container">
+                    <div id="blog_section" class="section-header">
+                        <h2>Latest From Blog</h2>
+                    </div>
+                    <div class="row blog-page">
+                        <div class="col-lg-4 col-md-6 blog-item">
+                            <img src="img/blog-7.jpg" alt="Blog">
+                            <h3>Understanding Trademark, Patent, and Copyright Laws in Bangladesh</h3>
+                            <div class="meta">
+                                <i class="fa fa-list-alt"></i>
+                                <a href="">Intellectual Property</a>
+                                <i class="fa fa-calendar-alt"></i>
+                                <p>12-Mar-2025</p>
+                            </div>
+                            <p>
+                                Intellectual Property (IP) is vital for any business or individual aiming to protect their
+                                creations ...
+                            </p>
+                            <a class="btn read-more-btn" data-id="7">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 blog-item">
+                            <img src="img/blog-8.jpg" alt="Blog">
+                            <h3>Navigating Loan Agreements and Financial Contracts with Legal Support </h3>
+                            <div class="meta">
+                                <i class="fa fa-list-alt"></i>
+                                <a href="">Finance</a>
+                                <i class="fa fa-calendar-alt"></i>
+                                <p>15-Mar-2025</p>
+                            </div>
+                            <p>
+                                Navigating loan agreements and financial contracts can be complex, whether you're an individual ...
+                            </p>
+                            <a class="btn read-more-btn" data-id="8">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 blog-item">
+                            <img src="img/blog-9.jpg" alt="Blog">
+                            <h3>Why Proper Corporate Documentation Matters: Avoiding Legal Risks in Business </h3>
+                            <div class="meta">
+                                <i class="fa fa-list-alt"></i>
+                                <a href="">Finance</a>
+                                <i class="fa fa-calendar-alt"></i>
+                                <p>17-Mar-2025</p>
+                            </div>
+                            <p>
+                                Proper corporate documentation is crucial for ensuring your business operates smoothly ...
+
+                            </p>
+                            <a class="btn read-more-btn" data-id="9">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-4.jpg" alt="Blog">-->
+<!--                            <h3>A Complete Guide to Taxation in Bangladesh: Laws, Rates, and Compliance</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Taxation</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>06-Mar-2025</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Navigating the tax landscape in Bangladesh can be challenging, but it’s crucial for business-->
+<!--                                success ...-->
+<!--                            </p>-->
+<!--                            <a class="btn read-more-btn" data-id="4">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-5.jpg" alt="Blog">-->
+<!--                            <h3>Step-by-Step Guide: How to File a Writ Petition in Bangladesh</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Legal</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>08-Mar-2025</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Facing an injustice? A writ petition might be the solution you need. It’s a powerful legal tool ...-->
+<!--                            </p>-->
+<!--                            <a class="btn read-more-btn" data-id="5">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-6.jpg" alt="Blog">-->
+<!--                            <h3>Why Proper Land and Property Documentation is Essential for Your Legal Safety</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Legal</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>12-Mar-2025</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                When it comes to buying, selling, or managing property in Bangladesh, proper documentation is ...-->
+<!--                            </p>-->
+<!--                            <a class="btn read-more-btn" data-id="6">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-1.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Property Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-2.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Political Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 col-md-6 blog-item">-->
+<!--                            <img src="img/blog-3.jpg" alt="Blog">-->
+<!--                            <h3>Lorem ipsum dolor</h3>-->
+<!--                            <div class="meta">-->
+<!--                                <i class="fa fa-list-alt"></i>-->
+<!--                                <a href="">Social Law</a>-->
+<!--                                <i class="fa fa-calendar-alt"></i>-->
+<!--                                <p>01-Jan-2045</p>-->
+<!--                            </div>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor-->
+<!--                            </p>-->
+<!--                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="blog.html">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="blog.html">1</a></li>
+                                <li class="page-item active"><a class="page-link" style="color: white" href="#">2</a></li>
+<!--                                <li class="page-item disabled"><a class="page-link" href="#">3</a></li>-->
+                                <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog End -->
+
+
+
+            <!-- Footer Start -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-about">
+                                <h2>About Us</h2>
+                                <p id="about-us-text-footer">
+                                    FT Associate Law Firm, founded in 2015 in Uttara, is a trusted legal partner specializing
+                                    in business, tax, IP, and family law. Committed to integrity and client-focused solutions,
+                                    our expert team delivers strategic legal support to protect your interests and drive success.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-8">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="footer-link">
+                                        <h2>Key Services Areas</h2>
+                                        <a href="services.html#company_formation_and_compliance">Company Formation and Compliance</a>
+                                        <a href="services.html#corporate_and_tax_consultancy">Corporate and Tax Consultancy</a>
+                                        <a href="services.html#business_and_industrial_licenses">Business and Industrial Licenses</a>
+                                        <!--                                <a href="services.html#">VAT and Customs Services</a>-->
+                                        <!--                                <a href="services.html#">Criminal Law</a>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="footer-link">
+                                        <h2>Useful Pages</h2>
+                                        <a href="about.html">About Us</a>
+                                        <a href="services.html">Service</a>
+                                        <a href="practice.html">Practice</a>
+                                        <a href="attorneys.html">Attorneys</a>
+                                        <!--                                <a href="portfolio.html">Case Studies</a>-->
+                                        <a href="blog.html">Blogs</a>
+                                        <a href="index.html#index_faq">FAQs</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="footer-contact">
+                                        <h2>Get In Touch</h2>
+                                        <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                        <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                        <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                        <div class="footer-social">
+                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+<!--                <div class="container footer-menu">-->
+<!--                    <div class="f-menu">-->
+<!--                        <a href="">Terms of use</a>-->
+<!--                        <a href="">Privacy policy</a>-->
+<!--                        <a href="">Cookies</a>-->
+<!--                        <a href="">Help</a>-->
+<!--                        <a href="">FQAs</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="https://htmlcodex.com/law-firm-website-template">HTML Codex</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- Blog Post Modal -->
+        <div id="blogModal" class="modal">
+            <div class="modal-content" style="position: relative;">
+                <div style="position: sticky; top: 0; background: #ffffff; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+                    <span class="close" style="font-size: 40px; cursor: pointer; color: #121518; z-index: 999; margin-top: -30px; margin-right: -24px; ">&times;</span>
+                    <h3 id="modal-title" style="margin: 0; flex-grow: 1;"></h3>
+                </div>
+                <p id="modal-meta"></p>
+                <img id="modal-image" src="" alt="Blog Image">
+                <p id="modal-content"></p>
+            </div>
+        </div>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script>
+            // JS code to load the blogs from JSON
+            // Blog data stored in a JSON object
+            const blogPosts = [
+
+                {
+                    id: 7,
+                    title: "Understanding Trademark, Patent, and Copyright Laws in Bangladesh",
+                    date: "12-Mar-2025",
+                    category: "Intellectual Property",
+                    image: "img/blog-7.jpg",
+                    description: `
+        <p>Intellectual Property (IP) is vital for any business or individual aiming to protect their creations, innovations, and brand identity. In Bangladesh, <strong>trademarks</strong>, <strong>patents</strong>, and <strong>copyrights</strong> are the legal tools that help safeguard your intellectual property from unauthorized use and infringement. <strong>FT Associate</strong> can guide you through these complex processes and help you secure your valuable assets.</p>
+
+        <h4>1. Trademark Law: Protect Your Brand</h4>
+        <p>A trademark represents your brand or business identity. Registering your trademark with the appropriate authorities ensures your logo, brand name, and product designs are protected. It prevents others from using or copying your distinctive mark, giving your business exclusivity in the market. Our legal team at <strong>FT Associate</strong> assists in the complete registration process.</p>
+
+        <h4>2. Patent Law: Secure Your Innovations</h4>
+        <p>Patents protect your inventions, ensuring no one else can use, sell, or manufacture your invention without permission. Whether you have a unique product or a new technological advancement, registering a patent can help secure your innovation for a specific period. <strong>FT Associate</strong> helps you navigate the patent registration process with ease.</p>
+
+        <h4>3. Copyright Law: Safeguard Your Creative Works</h4>
+        <p>Copyright laws protect your original works of authorship, including literature, music, art, software, and other creative content. If you are a writer, artist, or software developer, copyright law gives you the right to control the use of your creations. <strong>FT Associate</strong> helps in ensuring that your intellectual property rights are effectively protected.</p>
+
+        <h4>Why Choose FT Associate for IP Protection?</h4>
+        <p>At <strong>FT Associate</strong>, we have extensive experience in helping businesses and individuals navigate trademark, patent, and copyright registration processes. Our team is dedicated to protecting your intellectual property rights and ensuring that your assets are legally secured.</p>
+
+        <h4>Need Help? Contact Us Today!</h4>
+        <p>Whether you’re a startup or an established company, understanding and securing your intellectual property rights is crucial. Contact <strong>FT Associate</strong> today to discuss how we can assist you with your IP needs.</p>
+    `
+                },
+                {
+                    id: 8,
+                    title: "Navigating Loan Agreements and Financial Contracts with Legal Support",
+                    date: "15-Mar-2025",
+                    category: "Finance",
+                    image: "img/blog-8.jpg",
+                    description: `
+        <p>Navigating loan agreements and financial contracts can be complex, whether you're an individual, business owner, lender, or financial institution. It’s essential to have legal support to ensure that the terms of these agreements are clear, fair, and comply with the latest financial regulations in Bangladesh. A solid legal foundation can help prevent future disputes and provide you with peace of mind that your financial agreements are well-structured.</p>
+
+        <p><strong>FT Associate</strong> specializes in providing comprehensive legal services related to loan agreements and financial contracts. We offer expert assistance in drafting, reviewing, and negotiating agreements, ensuring that your rights and interests are protected. From simple loans to more complex financial transactions, our team can guide you through the legal nuances, helping you avoid costly mistakes.</p>
+
+        <h4>Why Legal Support is Essential</h4>
+        <p>Financial agreements often involve intricate legal terms that can be difficult to understand. Without legal guidance, individuals and businesses may unknowingly agree to unfavorable conditions. Our legal team ensures that:</p>
+        <ul>
+            <li>Your agreements are legally sound and enforceable.</li>
+            <li>The terms protect your financial interests.</li>
+            <li>You comply with all relevant financial regulations.</li>
+            <li>Potential risks are identified and mitigated before signing.</li>
+        </ul>
+
+        <h4>Efficient and Hassle-Free Legal Assistance</h4>
+        <p>Our approach is efficient and non-disruptive to your daily operations. We understand the importance of your time, so our legal services are designed to minimize disruptions. Whether you're a busy entrepreneur or a financial institution, we streamline the process to ensure that all aspects of your agreements are handled smoothly and without compromising your schedule.</p>
+
+        <h4>Partner with FT Associate for Legal Clarity</h4>
+        <p><strong>FT Associate</strong> allows you to focus on your core operations while we manage the legal complexities. Whether you need assistance with loan agreements, financial contracts, or compliance, our team is here to help.</p>
+
+        <h4>Need Legal Support? Contact Us Today!</h4>
+        <p>Secure your financial agreements with expert legal guidance. Contact <strong>FT Associate</strong> today to ensure your contracts are structured, compliant, and legally protected.</p>
+    `
+                },
+                {
+                    "id": 9,
+                    "title": "How FT Associate Can Help You Resolve Banking and Finance Disputes",
+                    "date": "17-Mar-2025",
+                    "category": "Finance",
+                    "image": "img/blog-9.jpg",
+                    "description": `
+        <p>Banking and finance disputes can be challenging, but they’re common. Whether it’s a loan default, a breach of contract, or any other financial disagreement, resolving these disputes efficiently and effectively requires a deep understanding of the financial landscape and legal frameworks. Without proper legal guidance, these disputes can escalate, costing you time, money, and peace of mind.</p>
+
+        <h4>Why Do Banking and Finance Disputes Occur?</h4>
+        <ul>
+            <li><strong>Loan Defaults:</strong> When borrowers fail to meet repayment obligations.</li>
+            <li><strong>Breach of Contract:</strong> Disputes arising from non-compliance with financial agreements.</li>
+            <li><strong>Fraud Claims:</strong> Cases involving financial misconduct or unauthorized transactions.</li>
+            <li><strong>Payment Issues:</strong> Disputes between banks, businesses, and individuals over payments.</li>
+        </ul>
+
+        <h4>How FT Associate Can Assist You</h4>
+        <p>At <strong>FT Associate</strong>, we specialize in resolving banking and finance disputes for individuals, businesses, and financial institutions. Our team of legal experts provides strategic solutions through:</p>
+        <ul>
+            <li><strong>Mediation:</strong> We facilitate discussions to reach amicable settlements outside of court.</li>
+            <li><strong>Arbitration:</strong> A structured approach to dispute resolution without prolonged litigation.</li>
+            <li><strong>Litigation:</strong> Representing clients in court to ensure fair outcomes.</li>
+        </ul>
+
+        <h4>Minimizing Disruptions to Your Operations</h4>
+        <p>We understand that time is valuable, and the disruption caused by disputes can affect your business or personal schedule. That’s why <strong>FT Associate</strong> ensures a seamless, timely resolution to minimize any interference with your operations or activities. Whether it’s via digital communication or flexible scheduling, we ensure that our services are efficient and cause minimal disruption to your regular operations.</p>
+
+        <h4>Contact FT Associate Today</h4>
+        <p>If you’re facing a banking or finance dispute, don’t navigate it alone. Let <strong>FT Associate</strong> provide the legal support you need. Contact us today for expert assistance and a swift resolution.</p>
+    `
+                }
+
+
+
+
+            ];
+
+
+            function openModal(blogId) {
+                const blog = blogPosts.find(post => post.id === blogId);
+                if (blog) {
+                    document.getElementById("modal-title").innerText = blog.title;
+                    document.getElementById("modal-meta").innerText = `${blog.date} | ${blog.category}`;
+                    document.getElementById("modal-image").src = blog.image;
+                    document.getElementById("modal-content").innerHTML = blog.description;
+
+                    document.getElementById("blogModal").style.display = "flex";
+                }
+            }
+
+            // Attach event listeners to all Read More buttons
+            document.querySelectorAll(".read-more-btn").forEach(button => {
+                button.addEventListener("click", function() {
+                    const blogId = parseInt(this.getAttribute("data-id"));
+                    openModal(blogId);
+                });
+            });
+
+            // Close Modal on clicking outside or pressing ESC
+            document.addEventListener("click", function(event) {
+                let modal = document.getElementById("blogModal");
+                if (event.target.classList.contains("modal") || event.target.classList.contains("close")) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "Escape") {
+                    document.getElementById("blogModal").style.display = "none";
+                }
+            });
+        </script>
+
+    </body>
+</html>
